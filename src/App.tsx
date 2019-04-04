@@ -15,8 +15,8 @@ class App extends Component {
       'rgba(255, 0, 255, 0.6)', 'rgba(0, 255, 255, 0.6)', 'rgba(255, 165, 0, 0.6)', 'rgba(0, 0, 0, 0.6)',
       'rgba(255, 255, 0, 0.6)', 'rgba(0, 255, 0, 0.6)', 'rgba(128, 128, 0, 0.6)'];
     for(let i = 0; i < 10 + Math.floor(Math.random() * 10); i++) {
-      const randX = Math.floor(Math.random() * (window.innerWidth - 20));
-      const randY = Math.floor(Math.random() * (window.innerHeight - 20));
+      const randX = Math.floor(Math.random() * 500);
+      const randY = Math.floor(Math.random() * 500);
       const node = {
         label: i.toString(),
         pos: [randX, randY],
@@ -32,9 +32,9 @@ class App extends Component {
         }
       }
     }
-
     this.defaultModel.setNodesAndLinks(nodes, links);
   }
+
   render() {
     return (
         <GraphView model={this.defaultModel}/>
